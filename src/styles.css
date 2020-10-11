@@ -4,15 +4,15 @@ body{
     overflow-x: hidden;
 }
 .footer{
-    position: absolute;
     text-align: center;
     background-color: black;
-    height: 80px;
-    width: 100%;
-    bottom: 0;
+    height: 60px;
     color: white;
 }
 .j-center{
     justify-content: center;
     text-align: center;
+}
+.white{
+    color: white;
 }

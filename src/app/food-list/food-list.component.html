@@ -3,22 +3,18 @@
         <tr>    
             <th>IMAGEN</th>
             <th>NOMBRE</th>
+            <th>VEGANA</th>
             <th>PRECIO</th>
             <th>STOCK</th>
         </tr>
     </thead>   
     <tbody>
-        <tr>
+        <tr *ngFor="let food of foods" [ngClass]="{'oferta': food.oferta}">
             <td><img [src]="food.image" [alt]="food.nombre" width="200px" height="150px"></td>
-            <td>{{food.nombre}}</td>
-            <td>{{food.precio}}</td>
-            <td>{{food.stock}}</td>
-        </tr>
-        <tr>
-            <td><img [src]="food.image" [alt]="food.nombre" width="200px" height="150px"></td>
-            <td>Super pizza</td>
-            <td>300</td>
-            <td>8</td>
+            <td>{{food.nombre | uppercase}}</td>
+            <td>{{food.vegana | uppercase}}</td>
+            <td>{{food.precio | currency}}</td>
+            <td><span class="badge badge-danger" *ngIf="food.stock == 0">Sin stock</span><span class="badge badge-pill badge-success" *ngIf="food.stock > 0">Disponible</span></td>
         </tr>
     </tbody>
 </table>
