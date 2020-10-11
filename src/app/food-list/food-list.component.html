@@ -1,0 +1,24 @@
+<table class="table center bg-darkLigth">
+    <thead>
+        <tr>    
+            <th>IMAGEN</th>
+            <th>NOMBRE</th>
+            <th>PRECIO</th>
+            <th>STOCK</th>
+        </tr>
+    </thead>   
+    <tbody>
+        <tr>
+            <td><img [src]="food.image" [alt]="food.nombre" width="200px" height="150px"></td>
+            <td>{{food.nombre}}</td>
+            <td>{{food.precio}}</td>
+            <td>{{food.stock}}</td>
+        </tr>
+        <tr>
+            <td><img [src]="food.image" [alt]="food.nombre" width="200px" height="150px"></td>
+            <td>Super pizza</td>
+            <td>300</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>

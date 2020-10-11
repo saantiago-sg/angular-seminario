@@ -1,1 +1,18 @@
-/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+/* ESTO ES PARA EL HTML GLOBAL, NO EL DE ANGULAR */
+body{
+    overflow-x: hidden;
+}
+.footer{
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+    color: white;
+}
+.j-center{
+    justify-content: center;
+    text-align: center;
+}
