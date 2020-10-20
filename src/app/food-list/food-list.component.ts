@@ -17,6 +17,7 @@ export class FoodListComponent implements OnInit {
     vegana : "si",
     stock : 6,
     oferta : false,
+    cantidad : 0,
   },
   {
     image : "assets/img/muza.jpg",
@@ -25,6 +26,7 @@ export class FoodListComponent implements OnInit {
     vegana : "si",
     stock : 0,
     oferta : true,
+    cantidad : 0,
   },
   {
     image : "assets/img/muza.jpg",
@@ -33,6 +35,7 @@ export class FoodListComponent implements OnInit {
     vegana : "no",
     stock : 1,
     oferta : false,
+    cantidad : 0,
   },
   {
     image : "assets/img/muza.jpg",
@@ -41,6 +44,7 @@ export class FoodListComponent implements OnInit {
     vegana : "no",
     stock : 0,
     oferta : true,
+    cantidad : 0,
   },
 ];
 
@@ -49,4 +53,19 @@ export class FoodListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upCantidad(food: Food):void{
+    if(food.cantidad < food.stock)
+    food.cantidad++;
+  }
+
+  downCantidad(food: Food):void{  //tipo Food
+    if(food.cantidad > 0)
+    food.cantidad--;
+  }
+
+  onChangeCantidad(event, food: Food):void{
+    if(event.key > 0 && event.key < 9)
+    event.preventDefault();
+  
+  }
 }

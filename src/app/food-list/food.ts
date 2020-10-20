@@ -5,4 +5,5 @@ export interface Food{
     vegana : string;
     stock : number;
     oferta : boolean;
+    cantidad : number;
 }

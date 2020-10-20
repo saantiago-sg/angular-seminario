@@ -6,6 +6,7 @@
             <th>VEGANA</th>
             <th>PRECIO</th>
             <th>STOCK</th>
+            <th>COMPRA</th>
         </tr>
     </thead>   
     <tbody>
@@ -15,6 +16,11 @@
             <td>{{food.vegana | uppercase}}</td>
             <td>{{food.precio | currency}}</td>
             <td><span class="badge badge-danger" *ngIf="food.stock == 0">Sin stock</span><span class="badge badge-pill badge-success" *ngIf="food.stock > 0">Disponible</span></td>
+            <td>
+                <button class="btn btn-success btn-sm" (click)="upCantidad(food)">+</button>
+                <input type="text" [(ngModel)]="food.cantidad" (keyup)="onChangeCantidad($event, food)">
+                <button class="btn btn-danger btn-sm" (click)="downCantidad(food)">-</button>
+            </td>  <!-- cantidad la declaro en food.ts-->
         </tr>
     </tbody>
 </table>

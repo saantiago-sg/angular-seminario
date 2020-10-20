@@ -4,13 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FoodListComponent } from './food-list/food-list.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
     FoodListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
