@@ -3,35 +3,24 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" href="#">{{title}}</a>
+    <h4 class="navbar-brand c-gr">{{title}}</h4>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link white" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link white" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link white" href="#">Contacto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link white" href="#">Recomendaciones</a>
+        <a class="nav-link white" [routerLink]="['/contactos']">Contacto</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btnSearch my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 </nav>
 <div class="container">
-  <div class="row mt-2">
-    <div class="col-8">
-      <app-food-list></app-food-list>
-    </div>
-
-    <div class="col-4"> CARRITO DE COMPRAS</div>
-  </div>
+  <router-outlet></router-outlet>
 </div>
-
-
 <footer class="footer">
-  <h5>{{title}} 2020</h5>
+  <h5 class="c-gr">{{title}} 2020</h5>
 </footer>

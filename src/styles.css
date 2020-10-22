@@ -16,3 +16,7 @@ body{
 .white{
     color: white;
 }
+.input-group{
+    width: 30px;
+    text-align: center;
+}

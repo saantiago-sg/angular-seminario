@@ -1,0 +1,11 @@
+.c-gr{
+    color: greenyellow;
+}
+.btnSearch{
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+    color: greenyellow;
+}
+.btnSearch:hover{
+    background-color: rgba(107, 161, 26, 0.349);
+}
