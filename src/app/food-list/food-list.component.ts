@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FoodCartService } from '../food-cart.service';
 // import { from } from 'rxjs';
 import { Food } from './food';
 
@@ -47,25 +48,24 @@ export class FoodListComponent implements OnInit {
     cantidad : 0,
   },
 ];
+  
 
-  constructor() { }
+
+  constructor(private cart: FoodCartService) { 
+  }
 
   ngOnInit(): void {
   }
-
-  upCantidad(food: Food):void{
-    if(food.cantidad < food.stock)
-    food.cantidad++;
-  }
-
-  downCantidad(food: Food):void{  //tipo Food
-    if(food.cantidad > 0)
-    food.cantidad--;
-  }
-
-  onChangeCantidad(event, food: Food):void{
-    if(event.key > 0 && event.key < 9)
-    event.preventDefault();
   
+  addToCart(food): void{
+   this.cart.addToCart(food);
+   
+   food.stock -= food.cantidad;
+   food.cantidad = 0;
   }
+
+  cantidadMax(m: string){
+    alert(m);
+  }
+
 }

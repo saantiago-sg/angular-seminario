@@ -1,1 +1,12 @@
-<h4>Carrito de compras</h4>
+<div class="center bg-yell">
+
+<h4>CARRITO DE COMPRAS</h4>
+
+<ul>
+    <li class="bg-green" *ngFor="let food of (cartList$ | async)">
+        {{food.nombre}} : {{food.cantidad}}
+    </li>
+</ul>
+
+</div>
+

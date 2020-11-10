@@ -9,6 +9,7 @@ import { FoodContactoComponent } from './food-contacto/food-contacto.component';
 import { FoodFastComponent } from './food-fast/food-fast.component';
 import { FoodCartComponent } from './food-cart/food-cart.component';
 import { AppRoutingModule } from './app-routing.module';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
     FoodListComponent,
     FoodContactoComponent,
     FoodFastComponent,
-    FoodCartComponent
+    FoodCartComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

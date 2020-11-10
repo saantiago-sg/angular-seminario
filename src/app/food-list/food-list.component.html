@@ -1,4 +1,4 @@
-<table class="table center bg-darkLigth">
+<table class="table center bg-yell">
     <thead>
         <tr>    
             <th>IMAGEN</th>
@@ -6,7 +6,8 @@
             <th>VEGANA</th>
             <th>PRECIO</th>
             <th>STOCK</th>
-            <th>COMPRA</th>
+            <th>CANTIDAD</th>
+            <th>COMPRAS</th>
         </tr>
     </thead>   
     <tbody>
@@ -17,12 +18,11 @@
             <td>{{food.precio | currency}}</td>
             <td><span class="badge badge-danger" *ngIf="food.stock == 0">Sin stock</span><span class="badge badge-pill badge-success" *ngIf="food.stock > 0">Disponible</span></td>
             <td>
-                <div class="row">
-                <button class="btn btn-success btn-sm" (click)="upCantidad(food)">+</button>
-                <input class="input-group" type="text" [(ngModel)]="food.cantidad" (keyup)="onChangeCantidad($event, food)">
-                <button class="btn btn-danger btn-sm" (click)="downCantidad(food)">-</button>
-                </div>
-            </td>  <!-- cantidad la declaro en food.ts-->
+              <app-input-integer [(cantidad)]="food.cantidad" [max]="food.stock" *ngIf="food.stock" (cantidadMax)="cantidadMax($event)"></app-input-integer>  <!-- COMPONENTE PADRE -->
+            </td> <!-- cantidad la declaro en food.ts-->
+            <td>
+              <button class="btn btn-primary" (click)="addToCart(food)">Comprar</button>
+            </td> 
         </tr>
     </tbody>
 </table>
