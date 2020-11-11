@@ -10,6 +10,7 @@ import { FoodFastComponent } from './food-fast/food-fast.component';
 import { FoodCartComponent } from './food-cart/food-cart.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { FoodComentariosComponent } from './food-comentarios/food-comentarios.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
     FoodContactoComponent,
     FoodFastComponent,
     FoodCartComponent,
-    InputIntegerComponent
+    InputIntegerComponent,
+    FoodComentariosComponent
   ],
   imports: [
     BrowserModule,
